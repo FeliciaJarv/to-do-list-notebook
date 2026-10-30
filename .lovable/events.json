@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "events": {
+    "project.task_completed": {
+      "event_schema_version": 1,
+      "description": "A task was ticked off as finished (not fired when un-ticking).",
+      "privacy": {
+        "contains_pii": false,
+        "purpose": "product_analytics"
+      },
+      "properties_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "list"
+        ],
+        "properties": {
+          "list": {
+            "type": "string",
+            "enum": [
+              "daily",
+              "shopping",
+              "other"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
